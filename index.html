@@ -1,38 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <title>Rock, Paper, Scissors</title>
-    </head>
-    <body>
-        <h4>Welcome to </h4>
-        <h1>Rock, Paper, Scissors!</h1>
-        
 
-        <main>
-            <section class="game-container">
-                <p>Player</p>
-                <div class="choice-container" id="player-choice-container">
-                    <p class="emoji">🪨</p>
-                    <p class="emoji">📄</p>
-                    <!-- prettier-ignore -->
-                    <p class="emoji">✂️ </p>
-                </div>
-            </section>
-            <h3>VS</h3>
-            <section class="game-container">
-                <p>Computer</p>
-                <div class="choice-container">
-                 <p class="emoji" id="emoji-shuffle"></p>
-                </div>
-            </section>
-        </main>
-        <h2 id="game-result-message"></h2>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Rock, Paper, Scissors</title>
+</head>
 
-        <script src="error-handler.js"></script>
-        <script src="app.js"></script>
-    </body>
+<body>
+
+
+
+    <h4>Welcome to </h4>
+    <h1>Rock, Paper, Scissors!</h1>
+
+
+    <main>
+        <section class="game-container">
+            <p>Player</p>
+            <div class="choice-container" id="player-choice-container">
+                <p class="emoji">🪨</p>
+                <p class="emoji">📄</p>
+                <!-- prettier-ignore -->
+                <p class="emoji">✂️ </p>
+
+            </div>
+            <div class="score">
+                <div class="playerScore">
+                    <h2>Player</h2>
+                    <p class="p-count count">0</p>
+
+                </div>
+
+        </section>
+        <h3>VS</h3>
+        <section class="game-container">
+            <p>Computer</p>
+            <div class="choice-container">
+                <p class="emoji" id="emoji-shuffle"></p>
+            </div>
+
+
+            <div class="computerScore">
+                <h2>Computer</h2>
+                <p class="c-count count">0</p>
+
+            </div>
+
+
+        </section>
+    </main>
+
+
+
+
+    </div>
+    <h2 id="game-result-message"></h2>
+    <!-- <p><input type="button" value="Restart Game" id =#btn1 onClick="refresh(this)"></p> -->
+    <button onclick="refresh(this)" id="btn1"> Refresh Game</button>
+
+    <script src="error-handler.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        function refresh() {
+            window.location.reload("Refresh")
+        }
+    </script>
+
+
+</body>
+
 </html>

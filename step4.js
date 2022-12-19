@@ -2,7 +2,7 @@
 
 var playerChoice = "";
 var computerChoice = "";
-var emojis = ["✂️ ", "📄", "🪨"];
+var emojis = ["✂️", "📄", "🪨"];
 var currentEmojiNumber = 0;
 
 // New
@@ -28,7 +28,9 @@ function shuffleEmojis() {
     // New
     if (currentEmojiNumber < emojis.length - 1) {
         currentEmojiNumber++;
-    } else {
+    }
+
+     else {
         currentEmojiNumber = 0;
     }
 }

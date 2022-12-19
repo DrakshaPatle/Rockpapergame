@@ -15,18 +15,25 @@ playerChoiceContainer.addEventListener("click", handlePlayerChoice);
 function determineGameWinner() {
    var gameResultMessageElement = document.querySelector("#game-result-message");
    var gameResultMessage = "";
+   var usercount=0;
+   var compcount=0;
 
    if (playerChoice === computerChoice) {
        gameResultMessage = "It's a tie!";
        // Note the extra space in the scissors emoji!
    } else if (playerChoice === "🪨" && computerChoice === "✂️ ") {
        gameResultMessage = "Player wins!";
+       usercount++;
    } else if (playerChoice === "📄" && computerChoice === "🪨") {
        gameResultMessage = "Player wins!";
+       usercount++;
+
    } else if (playerChoice === "✂️ " && computerChoice === "📄") {
        gameResultMessage = "Player wins!";
+       usercount++;
    } else {
        gameResultMessage = "Computer wins!";
+       usercount++;
    }
 
    gameResultMessageElement.textContent = gameResultMessage + " Refresh to play again!";
